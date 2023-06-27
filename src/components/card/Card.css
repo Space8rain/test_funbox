@@ -1,0 +1,155 @@
+.card__border {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background-color: var(--primary);
+  border-radius: 14px;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+}
+
+.card__content {
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 312px;
+  height: 472px;
+  font-family: Trebuchet_MS;
+  color: var(--second-text-color);
+  background-color: var(--surface);
+  border-radius: 11px;
+  clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+  background-image: url('../../vendor/images/cat.png'); /* Фолбэк */
+  background-image: -webkit-image-set(
+    url('../../vendor/images/cat.png') 1x,
+    url('../../vendor/images/cat@2x.png') 2x
+  );
+  background-image: image-set(
+    url('../../vendor/images/cat.png') type("image/png") 1x,
+    url('../../vendor/images/cat@2x.png') type("image/png") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 21px 0 0 48px;
+}
+
+.card__head {
+  margin: 0 0 5px 0;
+  color: var(--info-text-color);
+}
+
+.card__title {
+  font-size: 48px;
+  font-weight: 700;
+  /* text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px; */
+}
+
+.card__taste {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.card__promo {
+  margin: 0;
+  font-size: 14px;
+  width: 130px;
+  line-height: 16px;
+  color: var(--info-text-color);
+}
+
+.card__weight {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  color: var(--primary-text-color);
+}
+
+.card__weight_value {
+  margin: 0;
+  font-size: 42px;
+  margin-top: 10px;
+}
+
+.card__weight_unit {
+  margin: 0;
+}
+
+.card__msg {
+  font-size: 13px;
+  margin: 14px 0;
+  width: 320px;
+}
+
+.card__msg_link {
+  color: var(--primary);
+  text-decoration: underline dashed;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* стили для состояния hover */
+.hover {
+  background-color: var(--primary_hover);
+}
+
+/* Стили для выбранной карточки */
+.select.card__border {
+  background-color: var(--select);
+}
+
+.select.hover.card__head {
+  color: var(--select);
+  background-color: var(--surface);
+}
+
+.select.card__weight{
+  background-color: var(--select);
+}
+
+.select.card__msg {
+  color: var(--disabled-text-color);
+}
+
+/* Стили для выбранной карточки с состоянием hover */
+.select.hover{
+  background-color: var(--select_hover);
+}
+
+.hover.card__head {
+  background-color: var(--surface);
+}
+
+/* Стили для неактивных карточек */
+
+.disabled .card__border {
+  background-color: var(--disabled);
+}
+
+.disabled .card__weight{
+  color: var(--primary-text-color);
+  background-color: var(--disabled);
+}
+
+.disabled .card__content {
+  cursor: default;
+  opacity: .5;
+  color: var(--disabled);
+}
+
+.disabled .card__msg {
+  color: var(--disabled-text-color);
+}

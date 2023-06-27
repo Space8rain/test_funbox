@@ -1,0 +1,74 @@
+@import url('./components/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap');
+
+@font-face {
+  font-weight: 400;
+  font-family: Trebuchet_MS;
+  src: url("./vendor/fonts/trebuchetms.ttf");
+}
+
+:root {
+  --surface: #f2f2f2;
+  --primary: #1698D9;
+  --primary_hover: #2EA8E6;
+  --select: #D91667;
+  --select_hover: #E52E7A;
+  --primary-text-color: #FFF;
+  --second-text-color: #000000;
+  --info-text-color: #666666;
+  --disabled: #B3B3B3;
+  --disabled-text-color: #FFFF66;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  background-image: url(./vendor/images/bg_cut.png); /* Фолбэк */
+  background-image: -webkit-image-set(
+    url(./vendor/images/bg_cut.png) 1x,
+    url(./vendor/images/bg_cut@2x.png) 2x
+  );
+  background-image: image-set(
+    url(./vendor/images/bg_cut.png) type("image/png") 1x,
+    url(./vendor/images/bg_cut@2x.png) type("image/png") 2x
+  );
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.title {
+  font-family: 'Exo 2';
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 100;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1279px) {
+  .cards {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .title {
+    margin-top: 25px;
+  }
+}
