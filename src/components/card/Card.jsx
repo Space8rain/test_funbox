@@ -23,10 +23,11 @@ export default function Card ({ card }) {
 
   return (
     <article
-      onClick={!card.disabled ? handleSelect : undefined}
       className={`card ${card.disabled ? 'disabled' : ''}`}
     >
-      <div className={`card__border ${isSelect ? 'select' : ''} ${isHover ? 'hover' : ''}`}>
+      <div
+        onClick={!card.disabled ? handleSelect : undefined}
+        className={`card__border ${isSelect ? 'select' : ''} ${isHover ? 'hover' : ''}`}>
         <div
           className="card__content"
           onMouseEnter={handleMouseEnter}
